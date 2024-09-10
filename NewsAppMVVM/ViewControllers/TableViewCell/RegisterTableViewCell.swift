@@ -47,7 +47,7 @@ class RegisterTableViewCell: UITableViewCell {
         view.layer.masksToBounds = true
         view.layer.borderWidth = 2.0
         view.layer.borderColor = UIColor.black.cgColor
-        view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 6
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
