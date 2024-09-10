@@ -15,7 +15,7 @@ class LoginViewController: UIViewController ,UITableViewDelegate,UITableViewData
     let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "NEWS"
+        navigationItem.title = " CURRENT NEWS"
         loginTableView.delegate = self
         loginTableView.dataSource = self
         loginTableView.register(UINib(nibName: "LoginTableViewCell", bundle: nil), forCellReuseIdentifier: "LoginTableViewCell")
