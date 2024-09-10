@@ -45,7 +45,7 @@ class RegisterTableViewCell: UITableViewCell {
     
     private func setupTextViewStyle(view: UIView){
         view.layer.masksToBounds = true
-        view.layer.borderWidth = 2.0
+        view.layer.borderWidth = 2.2
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.cornerRadius = 5
     }
