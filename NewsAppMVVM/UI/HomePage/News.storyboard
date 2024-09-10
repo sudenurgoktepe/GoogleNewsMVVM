@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iWe-RO-PDF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google News-->
+        <scene sceneID="18b-0I-R4s">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="B4z-TA-vtZ" customClass="NewsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Apv-tn-17Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lr5-6B-dGz">
+                                <rect key="frame" x="0.0" y="103" width="393" height="755"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="759" id="daw-b6-c0R"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-Gc-4d9">
+                                <rect key="frame" x="139" y="463" width="127" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sfo-MX-mRs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cC8-Gc-4d9" firstAttribute="top" secondItem="Sfo-MX-mRs" secondAttribute="top" constant="360" id="1K2-s0-0yk"/>
+                            <constraint firstItem="Sfo-MX-mRs" firstAttribute="trailing" secondItem="Lr5-6B-dGz" secondAttribute="trailing" id="HBp-k6-c51"/>
+                            <constraint firstItem="Sfo-MX-mRs" firstAttribute="trailing" secondItem="cC8-Gc-4d9" secondAttribute="trailing" constant="127" id="NtP-X7-sde"/>
+                            <constraint firstItem="Lr5-6B-dGz" firstAttribute="leading" secondItem="Sfo-MX-mRs" secondAttribute="leading" id="Spg-f1-trA"/>
+                            <constraint firstItem="Lr5-6B-dGz" firstAttribute="top" secondItem="Sfo-MX-mRs" secondAttribute="top" id="Ubm-cY-PeE"/>
+                            <constraint firstItem="cC8-Gc-4d9" firstAttribute="leading" secondItem="Sfo-MX-mRs" secondAttribute="leading" constant="139" id="ajw-4E-0bi"/>
+                            <constraint firstItem="Sfo-MX-mRs" firstAttribute="bottom" secondItem="cC8-Gc-4d9" secondAttribute="bottom" constant="358" id="eQk-5u-Zo4"/>
+                            <constraint firstItem="Sfo-MX-mRs" firstAttribute="bottom" secondItem="Lr5-6B-dGz" secondAttribute="bottom" id="kLr-ps-uKY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google News" id="TaZ-hO-448"/>
+                    <connections>
+                        <outlet property="loadingActivityIndicator" destination="cC8-Gc-4d9" id="GEe-Fa-dXf"/>
+                        <outlet property="tableView" destination="Lr5-6B-dGz" id="VZY-Q1-ewl"/>
+                        <segue destination="OcB-Vp-Dbs" kind="show" identifier="toNewsDetailsVC" id="MRP-VA-SXQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1V-md-K2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3110.6870229007632" y="-35.211267605633807"/>
+        </scene>
+        <!--NewsDetailsViewController-->
+        <scene sceneID="4Au-hn-HbE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewsDetails" referencedIdentifier="NewsDetailsViewController" id="OcB-Vp-Dbs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qjJ-77-l4L"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnz-8z-fXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3805" y="-27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t1w-9T-iUQ">
+            <objects>
+                <navigationController storyboardIdentifier="NewsViewController" automaticallyAdjustsScrollViewInsets="NO" id="iWe-RO-PDF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="BKU-IA-RaI"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mzW-qS-hj5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B4z-TA-vtZ" kind="relationship" relationship="rootViewController" id="RWy-hW-gg3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2UI-Wa-wN7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183.969465648855" y="-35.211267605633807"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

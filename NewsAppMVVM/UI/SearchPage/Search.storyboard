@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="leZ-7q-oW9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SearchViewController" customModule="NewsApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gd-8Z-7Ht">
+                                <rect key="frame" x="0.0" y="126" width="393" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="amd-DA-bDX">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="wVu-ac-ag3"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="amd-DA-bDX" firstAttribute="leading" secondItem="0Gd-8Z-7Ht" secondAttribute="leading" id="Xdx-pD-ryJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="amd-DA-bDX" secondAttribute="bottom" id="kJr-NN-Qte"/>
+                                    <constraint firstItem="amd-DA-bDX" firstAttribute="top" secondItem="0Gd-8Z-7Ht" secondAttribute="top" id="lPX-bh-Gh6"/>
+                                    <constraint firstAttribute="trailing" secondItem="amd-DA-bDX" secondAttribute="trailing" id="yyN-FU-b8R"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fOe-Mk-KXm">
+                                <rect key="frame" x="0.0" y="182" width="393" height="587"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aranan haber yok! Arama yapınız." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k1-0b-f1G">
+                                <rect key="frame" x="35" y="447.66666666666669" width="323" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8k1-0b-f1G" secondAttribute="bottom" constant="294.99999999999994" id="1kc-KL-COu"/>
+                            <constraint firstItem="8k1-0b-f1G" firstAttribute="centerX" secondItem="0Gd-8Z-7Ht" secondAttribute="centerX" id="I2M-S5-mct"/>
+                            <constraint firstItem="8k1-0b-f1G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="KjK-Df-VKE"/>
+                            <constraint firstItem="fOe-Mk-KXm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Qzd-Ly-QED"/>
+                            <constraint firstAttribute="trailing" secondItem="0Gd-8Z-7Ht" secondAttribute="trailing" id="Xlz-RM-a9H"/>
+                            <constraint firstItem="0Gd-8Z-7Ht" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="23" id="a4A-Ti-uuB"/>
+                            <constraint firstItem="0Gd-8Z-7Ht" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="dhu-ew-1qc"/>
+                            <constraint firstItem="fOe-Mk-KXm" firstAttribute="top" secondItem="0Gd-8Z-7Ht" secondAttribute="bottom" id="em0-8F-cgP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="fOe-Mk-KXm" secondAttribute="bottom" id="iEw-Mr-gdj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fOe-Mk-KXm" secondAttribute="trailing" id="xbX-a6-pah"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kfw-15-Fij"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="amd-DA-bDX" id="80t-hT-AcT"/>
+                        <outlet property="searchLabel" destination="8k1-0b-f1G" id="nvJ-mV-Hy3"/>
+                        <outlet property="searchTableView" destination="fOe-Mk-KXm" id="chy-g8-FPV"/>
+                        <segue destination="sSr-Bx-7aV" kind="show" identifier="toNewsDetailsVC" id="kno-rn-pIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991.60305343511448" y="-34.507042253521128"/>
+        </scene>
+        <!--NewsDetailsViewController-->
+        <scene sceneID="gI8-gG-jCb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewsDetails" referencedIdentifier="NewsDetailsViewController" id="sSr-Bx-7aV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nxt-pd-gz7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dB-Tu-fxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TIM-oU-bNP">
+            <objects>
+                <navigationController storyboardIdentifier="SearchViewController" automaticallyAdjustsScrollViewInsets="NO" id="leZ-7q-oW9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="XLQ-cm-LAr"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VrP-0i-Yjt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="tpf-GK-hWO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q64-52-PJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

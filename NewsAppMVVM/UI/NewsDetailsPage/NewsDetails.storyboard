@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wUv-sX-6Ze">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google News-->
+        <scene sceneID="jTT-wj-Ml8">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailsViewController" modalPresentationStyle="fullScreen" id="GxW-wK-1nY" customClass="NewsDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ow0-q8-h8q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGw-bL-n47">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k5l-zP-Khj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZGw-bL-n47" firstAttribute="top" secondItem="k5l-zP-Khj" secondAttribute="top" id="QfO-ZC-Ac0"/>
+                            <constraint firstItem="ZGw-bL-n47" firstAttribute="leading" secondItem="k5l-zP-Khj" secondAttribute="leading" id="UBN-fl-rqp"/>
+                            <constraint firstItem="k5l-zP-Khj" firstAttribute="bottom" secondItem="ZGw-bL-n47" secondAttribute="bottom" id="rhr-x1-AcX"/>
+                            <constraint firstItem="k5l-zP-Khj" firstAttribute="trailing" secondItem="ZGw-bL-n47" secondAttribute="trailing" id="tOv-ne-ub2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google News" id="JCX-1h-yf3" userLabel="navigationItem">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Shape" id="Jda-Mc-99N">
+                            <connections>
+                                <action selector="clickedButtton:" destination="GxW-wK-1nY" id="QKe-eR-2bY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="ZGw-bL-n47" id="Wmw-nt-k6O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXO-9T-dtu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5654.1984732824421" y="-452.11267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cpu-TH-8SD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wUv-sX-6Ze" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gW6-pk-sQw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GxW-wK-1nY" kind="relationship" relationship="rootViewController" id="PtG-4T-kt2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgL-ZB-gWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4727.480916030534" y="-452.11267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Shape" width="8" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
